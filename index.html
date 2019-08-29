@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="./node_modules/fonts/fonts.css" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/vuetify/dist/vuetify.css">
+    <link rel="stylesheet" href="./node_modules/@mdi/font/css/materialdesignicons.min.css">
+    <title>Personal</title>
+</head>
+<body>
+<div id="app">
+    <v-app>
+
+        <div>
+            <v-app-bar color="blue accent-4" dark >
+                <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
+                <v-toolbar-title>Contabi</v-toolbar-title>
+
+                <div class="flex-grow-1"></div>
+
+                <v-btn text> Inicio </v-btn>
+                <v-btn text> ¿Quienes somos? </v-btn>
+
+            </v-app-bar>
+        </div>
+        <v-content>
+            <v-container fluid>
+                <v-container>
+                    <v-card color="grey lighten-4" flat height="500px">
+                        <v-toolbar dense>
+                            <v-spacer></v-spacer>
+                            <v-toolbar-items>
+                                <v-btn text>Link 1</v-btn>
+                                <v-btn text>Link 2</v-btn>
+                                <v-btn text>Link 3</v-btn>
+                            </v-toolbar-items>
+                        </v-toolbar>
+                        <v-row justify="center" align="center">
+                            <v-col v-for="n in 2" :key="n" cols="sm" >
+                                <v-card class="pa-2" outlined tile >
+                                    <v-card class="mx-auto" max-width="400" >
+                                        <v-img class="white--text" height="200px" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" >
+                                          <v-card-title class="align-end fill-height">Top 10 Australian beaches</v-card-title>
+                                        </v-img>
+                                    
+                                        <v-card-text>
+                                          <span>Number 10</span><br>
+                                          <span class="text--primary">
+                                            <span>Whitehaven Beach</span><br>
+                                            <span>Whitsunday Island, Whitsunday Islands</span>
+                                          </span>
+                                        </v-card-text>
+                                    
+                                        <v-card-actions>
+                                          <v-btn text color="orange" >
+                                            Share
+                                          </v-btn>
+                                          <v-btn text color="orange" >
+                                            Explore
+                                          </v-btn>
+                                        </v-card-actions>
+                                    </v-card>
+                                </v-card>
+                            </v-col>
+                        </v-row>  
+                    </v-card>
+                </v-container>
+            </v-container>
+        </v-content>
+        <v-card height="150">
+            <v-footer absolute class="font-weight-medium" color="blue accent-4">
+                <v-col class="text-center white--text" cols="12">
+                {{ new Date().getFullYear() }} — <strong>Contabi</strong>
+                </v-col>
+            </v-footer>
+        </v-card>
+
+    </v-app>
+</div>
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script src="./node_modules/vuetify/dist/vuetify.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+new Vue({
+    el:'#app',
+    vuetify: new Vuetify(),
+})
+</script>
+</body>
+</html>
